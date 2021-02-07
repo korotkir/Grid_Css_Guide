@@ -1,0 +1,20 @@
+// Сначала убираем дефолтные отступы
+*
+  margin: 0
+  padding: 0
+
+.wrapper
+  display: grid // указываем систему сеток
+  grid-template-columns: 45% 45% // указываем пропорции колонок через запятую про каждый блок
+  //grid-column-gap: 10% // отступы по вертикали
+  //grid-row-gap: 10% // отступы по горизонтали
+  grid-gap: 10% // отступы и по горизонтали и по вертикали
+
+.wrapper > div
+  padding: 1em
+  background-color: #ee6375
+
+.wrapper > .light
+  padding: 1em
+  background-color: #ecc6cb
+

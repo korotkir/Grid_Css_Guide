@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-gap: 10%;
+}
+
+.wrapper > div {
+  padding: 1em;
+  background-color: #ee6375;
+}
+
+.wrapper > .light {
+  padding: 1em;
+  background-color: #ecc6cb;
+}
+
+/*# sourceMappingURL=one.css.map */
