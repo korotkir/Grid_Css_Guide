@@ -16,20 +16,30 @@ a {
 .navbar {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100%;
-      grid-template-rows: 100%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   height: 7vh;
   background-color: #008ba3;
 }
 
 .logo {
-  padding: 50px;
+  margin-left: 50px;
   font-size: 36px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-column-align: start;
       justify-self: start;
+}
+
+.burger {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-right: 50px;
+  display: none;
 }
 
 .wrapper {
@@ -49,7 +59,6 @@ a {
 }
 
 .menu-link {
-  border-bottom: 1px solid white;
   display: -ms-grid;
   display: grid;
   text-decoration: none;
@@ -58,6 +67,8 @@ a {
 
 a:hover {
   background-color: #008ba35e;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 span {
@@ -73,6 +84,7 @@ span {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow-y: visible;
 }
 
 .item {
@@ -81,13 +93,14 @@ span {
   background-color: white;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  height: 80%;
+  height: 45vh;
   width: 80%;
   -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
   border-radius: 15px;
+  margin: 20px;
 }
 
 .card-cover {
@@ -95,7 +108,7 @@ span {
   border-radius: 15px 15px 0 0;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  background-image: url(card-bg.jpg);
+  background-image: url(img/card-bg.jpg);
   background-size: cover;
 }
 
@@ -103,5 +116,36 @@ span {
   margin-top: 1%;
   padding: 3%;
   color: black;
+}
+
+@media (max-width: 992px) {
+  .content {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    -ms-grid-columns: 7fr;
+        grid-template-columns: 7fr;
+  }
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .content {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */

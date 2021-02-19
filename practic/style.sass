@@ -13,15 +13,21 @@ a
 
 .navbar
   display: grid
-  grid-template-rows: 100%
+  grid-template-columns: 1fr 1fr
   height: 7vh
-  background-color: #008ba3
+  background-color: #008ba3 
 
 .logo
-  padding: 50px
+  margin-left: 50px
   font-size: 36px
   align-self: center
   justify-self: start
+
+.burger
+  align-self: center
+  justify-self: end
+  margin-right: 50px
+  display: none
 
 .wrapper
   display: grid
@@ -34,13 +40,13 @@ a
   grid-template-rows: repeat(5, 8vh)
 
 .menu-link
-  border-bottom: 1px solid white
   display: grid
   text-decoration: none
   color: inherit
 
 a:hover
   background-color: #008ba35e
+  transition-delay: 0.2s
 
 span 
   justify-self: center
@@ -49,23 +55,25 @@ span
 .content
   display: grid
   grid-template-columns: 1fr 1fr 1fr 1fr
+  overflow-y: visible
 
 .item
   display: grid  
   background-color: white
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  height: 80%
+  height: 45vh
   width: 80%
   align-self: center
   justify-self: center
   border-radius: 15px
+  margin: 20px
 
 
 .card-cover
   height: 100%
   border-radius: 15px 15px 0 0
   grid-template-rows: 1fr 1fr
-  background-image: url(card-bg.jpg)
+  background-image: url(img/card-bg.jpg)
   background-size: cover
 
 .card-description
@@ -73,3 +81,29 @@ span
   padding: 3%
   color: black
 
+@media (max-width: 992px)
+  .content
+    grid-template-columns: 1fr 1fr 1fr
+
+@media (max-width: 768px) 
+  .wrapper
+    grid-template-columns: 7fr
+  
+  .menu
+    display: none
+
+  .burger
+    display: block
+
+  .content
+    grid-template-columns: 1fr 1fr  
+
+
+@media (max-width: 576px)
+  .content
+    grid-template-columns: 1fr    
+
+
+
+
+  
