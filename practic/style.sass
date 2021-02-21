@@ -1,6 +1,6 @@
 html,
 body
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif
   margin: 0
   padding: 0
   width: 100%
@@ -34,6 +34,9 @@ a
   grid-template-columns: 1fr 6fr
   height: 93vh
 
+.adaptiveMenu
+  animation: 2s
+
 .menu
   background-color: #00bcd4
   display: grid
@@ -60,19 +63,19 @@ span
 .item
   display: grid  
   background-color: white
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  height: 45vh
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+  height: 80%
   width: 80%
   align-self: center
   justify-self: center
   border-radius: 15px
   margin: 20px
+  grid-template-rows: 1fr 2fr
 
 
 .card-cover
   height: 100%
   border-radius: 15px 15px 0 0
-  grid-template-rows: 1fr 1fr
   background-image: url(img/card-bg.jpg)
   background-size: cover
 
@@ -96,12 +99,15 @@ span
     display: block
 
   .content
-    grid-template-columns: 1fr 1fr  
+    grid-template-columns: 1fr 1fr
 
 
 @media (max-width: 576px)
   .content
-    grid-template-columns: 1fr    
+    grid-template-columns: 1fr
+  .item
+    height: 50vh
+    width: 90%
 
 
 
